@@ -1,0 +1,74 @@
+@import '_reset.scss';
+
+.main{
+    height: max-content;
+    width: 100vw;
+    background-color: hsl(180, 52%, 96%);
+    padding-top: 3rem;
+
+    .offer{
+        position: relative;
+        height: max-content;
+        width: 80vw;
+        margin: 3rem auto;
+        background: white;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: .5rem;
+        padding-top: 2rem;
+        .photo{
+            width:3rem;
+            position: absolute;
+            border-radius: 100%;
+            top:-1.5rem;
+        }
+        .wrapper{
+            width: 90%;
+            margin: auto;
+            .company{
+                color: hsl(180, 29%, 50%);
+                font-weight: bold;
+                padding-top: .5rem;
+            }
+            .position{
+                width: 90%;
+                height:max-content;
+                display: flex;
+                font-weight: bold;
+                color:black;
+                padding-top: .5rem;
+            }
+            .informations{
+                width: 90%;
+                height:max-content;
+                color:gray;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid gray;
+                padding-top: .5rem;
+                .information{
+                    color:gray;
+                    width:80%;
+
+                    span{
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+            .skills{
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .skill{
+                    background-color: hsl(180, 52%, 96%);
+                    padding: .5rem;
+                    margin: .5rem .5rem 0 0;
+                    color: hsl(180, 29%, 50%);
+                    font-weight: bold;
+                }
+            }
+    }
+    }
+}
