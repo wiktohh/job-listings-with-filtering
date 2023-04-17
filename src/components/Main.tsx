@@ -9,6 +9,7 @@ const Main = () => {
                 <div className="offer">
                     <div className="wrapper">
                     <img className="photo" src={offer.logo} alt="company photo" />
+                     <span className="group">
                      <div className="company">
                         {offer.company}
                         
@@ -19,12 +20,13 @@ const Main = () => {
                      <div className="informations">
                         <div className="information">
                         <span>{offer.postedAt}</span>
-                        <span>.</span>
+                        <span>•</span>
                         <span>{offer.contract}</span>
-                        <span>.</span>
+                        <span>•</span>
                         <span>{offer.location}</span>
                         </div>
                      </div>
+                     </span>
                      <div className="skills">
                         <div className="skill">{offer.role}</div>
                         <div className="skill">{offer.level}</div>

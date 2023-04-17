@@ -11,11 +11,21 @@ $primary-color: hsl(180, 29%, 50%);
 
     input{
         position: absolute;
-        top:7rem;
+        padding: .5rem;
+        top:10rem;
         width:70%;
-        height:15%;
+        height:10%;
         border-radius: .5rem;
         border: none;
+        box-shadow: 0px 0px 9px 0px rgba(66, 68, 90, 1);
+
+        @media screen and (min-width:768px){
+            top:4rem;
+        }
+
+        @media screen and (min-width:1220px){
+            top:9rem;
+        }
     }
 
 

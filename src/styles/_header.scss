@@ -7,5 +7,18 @@ $primary-color: hsl(180, 29%, 50%);
 .bg-mobile{
     width:100vw;
     height:100%;
+
+    @media screen and (min-width:768px){
+        display:none;
+    }
+}
+.bg-desktop{
+    width:100vw;
+    height:100%;
+
+    @media screen and (max-width:768px){
+        display:none;
+    }
 }
 }
+

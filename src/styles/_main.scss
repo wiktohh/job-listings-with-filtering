@@ -8,25 +8,43 @@
 
     .offer{
         position: relative;
+        box-shadow: 0px 0px 9px -6px rgba(66, 68, 90, 1);
         height: max-content;
         width: 80vw;
         margin: 3rem auto;
         background: white;
         display:flex;
-        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         padding: .5rem;
-        padding-top: 2rem;
+       
+        @media screen and (max-width:768px){
+            padding-top: 2rem;
+        }
         .photo{
             width:3rem;
-            position: absolute;
             border-radius: 100%;
-            top:-1.5rem;
+            @media screen and (max-width:768px){
+                position: absolute;
+                top:-1.5rem;
+            }
+            @media screen and (min-width:768px){
+                width:6rem;
+            }
         }
         .wrapper{
             width: 90%;
             margin: auto;
+            @media screen and (min-width:768px){
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .group{
+                width:100%;
+                margin-left: 2rem;
+            }
             .company{
                 color: hsl(180, 29%, 50%);
                 font-weight: bold;
@@ -44,9 +62,11 @@
                 width: 90%;
                 height:max-content;
                 color:gray;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid gray;
                 padding-top: .5rem;
+                @media screen and (max-width:768px){
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid gray;
+                }
                 .information{
                     color:gray;
                     width:80%;
