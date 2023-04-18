@@ -1,7 +1,17 @@
 import "../styles/_main.scss"
 import Offers from "../data.json"
 
-const Main = () => {
+interface MainProps{
+    handleTags: Function
+}
+
+const Main = ({handleTags}: MainProps) => {
+
+    const addToTag = (e: React.MouseEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLInputElement;
+        const innerHTML = target.innerHTML
+        handleTags(innerHTML)
+    }
 
     return ( 
         <div className="main">
@@ -28,10 +38,10 @@ const Main = () => {
                      </div>
                      </span>
                      <div className="skills">
-                        <div className="skill">{offer.role}</div>
-                        <div className="skill">{offer.level}</div>
+                        <div onClick={addToTag} className="skill">{offer.role}</div>
+                        <div onClick={addToTag} className="skill">{offer.level}</div>
                         {offer.languages.map(language => (
-                            <div className="skill">
+                            <div onClick={addToTag} className="skill">
                                 {language}
                             </div>
                         ))}
