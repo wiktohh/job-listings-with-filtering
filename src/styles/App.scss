@@ -18,25 +18,44 @@ $primary-color: hsl(180, 29%, 50%);
         left: 50%;
         transform: translateX(-50%);
         display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: max-content;
         width: 80%;
         background: white;
         border-radius: 1rem;
-        padding: 1rem;
         box-shadow: 0px 10px 15px -7px rgb(93 164 164 / 50%);
 
+        .clearBtn{
+            background: none; border:none; outline: none;
+            color: hsl(180, 29%, 50%);
+            font-weight: bold;
+            cursor:pointer;
+        }
+
+        .tagWrapper{
+            display:flex;
+            flex-wrap:wrap;
+            width:70%;
+        }
         .tag{
+            margin: .5rem 1rem;
             display:flex; 
             justify-content: center;
             align-items: center;
             margin-right: 2rem;
             background-color: hsl(180, 52%, 96%);
             color: hsl(180, 29%, 50%);
-            font-weight: bold;            
+            font-weight: bold;      
+            .textTag{
+                padding: 0 1rem;
+            }  
             .removeBtn{
                 border:none; outline: none;
                 background: hsl(180, 29%, 50%);
                 color:white;
                 font-size:1.5rem;
+                cursor: pointer;
             }
             .removeBtn:hover{
                 background-color: black;
