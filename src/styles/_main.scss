@@ -46,9 +46,42 @@
                 margin-left: 2rem;
             }
             .company{
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 color: hsl(180, 29%, 50%);
                 font-weight: bold;
                 padding-top: .5rem;
+
+                .new-featured{
+                    display:flex;
+                    font-size:.8rem;
+                    .newOffer{
+                        margin-right: .5rem;
+                        width: fit-content;
+                        padding:.5rem;
+                        border-radius: .5rem;
+                        text-transform: uppercase;
+                        background: hsl(180, 29%, 50%);
+                        color: white;
+                        font-weight: bold;
+                        @media screen and (max-width:768px){
+                            margin: 0 .5rem;
+                        }
+                    }
+    
+                    .featuredOffer{
+                        width: fit-content;
+                        padding:.5rem;
+                        border-radius: .5rem;
+                        text-transform: uppercase;
+                        background: hsl(180, 14%, 20%);
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+        
             }
             .position{
                 width: 90%;

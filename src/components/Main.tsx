@@ -27,7 +27,10 @@ const Main = ({handleTags, tags}: MainProps) => {
                      <span className="group">
                      <div className="company">
                         {offer.company}
-                        
+                        <div className="new-featured">
+                            {offer.new ? <div className="newOffer">new!</div> : null}
+                            {offer.featured ? <div className="featuredOffer">featured!</div> : null}
+                        </div>
                      </div>
                      <div className="position">
                         {offer.position}
