@@ -34,10 +34,10 @@ $primary-color: hsl(180, 29%, 50%);
         }
 
         .tagWrapper{
-            display:flex;
-            flex-wrap:wrap;
             width:70%;
-        }
+                display:flex;
+                flex-wrap:wrap;
+            }
         .tag{
             margin: .5rem 1rem;
             display:flex; 

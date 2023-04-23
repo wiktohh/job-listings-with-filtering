@@ -3,19 +3,24 @@ import Offers from "../data.json"
 
 interface MainProps{
     handleTags: Function
+    tags:string[]
 }
 
-const Main = ({handleTags}: MainProps) => {
+const Main = ({handleTags, tags}: MainProps) => {
 
     const addToTag = (e: React.MouseEvent<HTMLDivElement>) => {
         const target = e.target as HTMLInputElement;
         const innerHTML = target.innerHTML
         handleTags(innerHTML)
     }
-
+    console.log(Offers);
     return ( 
         <div className="main">
-            {Offers.map(offer => (
+            {
+            Offers.filter(offer => {
+                const tmp = [...offer.languages, offer.role, offer.level]
+                return tags.every(tag => tmp.includes(tag))
+            }).map(offer => (
                 <div className="offer">
                     <div className="wrapper">
                     <img className="photo" src={offer.logo} alt="company photo" />

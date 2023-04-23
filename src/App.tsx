@@ -44,7 +44,7 @@ function App() {
           <button onClick={clearTags} className='clearBtn'>Clear</button>
           </div>
       )}
-      <Main handleTags={handleTags}/>
+      <Main tags={tags} handleTags={handleTags}/>
     </div>
   );
 }
